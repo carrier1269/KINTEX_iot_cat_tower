@@ -11,7 +11,7 @@
 <div style="position:relative;width:500px; height:300px;">
 	<canvas id="myChart"></canvas>
 	<div id="cap" style="position:absolute;top:160px;left:0px;text-align:center;width:100%;font-size:90px;font-family:Arial, sans-serif;">
-	℃
+	회
 	</div>
 </div>
 
@@ -42,7 +42,7 @@ newval   = recv/max_value;
 chart.data.datasets[0].data[0] = newval;
 chart.data.datasets[0].data[1] = 1-newval;
 chart.data.labels[0] = recv;
-document.getElementById("cap").innerHTML = recv + "℃";
+document.getElementById("cap").innerHTML = recv + "회";
 chart.update();
 }
 
