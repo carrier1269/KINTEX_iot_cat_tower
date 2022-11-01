@@ -4,25 +4,23 @@
 <title>NOCKANDA EXAMPLE</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.bundle.min.js"></script>
 <script type="text/javascript" charset="utf-8" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
-</style>
 </head>
 <body>
 
 
-<div style="position:relative;width:135px; height:105px;">
+<div style="position:relative;width:45px; height:35px;">
 	<canvas id="myChart"></canvas>
-	<div id="cap" style="position:absolute;top:58px;left:0px;text-align:center;width:100%;font-size:25px;font-family: 'Jua', sans-serif;">
+	<div id="cap" style="position:absolute;top:16px;left:0px;text-align:center;width:100%;font-size:10px;font-family:Arial, sans-serif;">
+	회
 	</div>
 </div>
 
 
 <script>
 var input_value = 0;
-var max_value = 50;
+var max_value = 180;
 var num = input_value/max_value; 
-var color = 'orange';
+var color = 'LightSteelBlue';
 var data = { labels: [input_value ], datasets: [ { data: [num, 1-num], backgroundColor: [color], hoverBackgroundColor: [ color ] }] }; 
 var ctx = document.getElementById('myChart').getContext('2d');
 var chart = new Chart(ctx, {
@@ -38,13 +36,13 @@ options: {
    circumference: 1 * Math.PI } 
 });
 function nockanda_forever(){
-var recv  = parseInt(window.AppInventor.getWebViewString());
+var recv  = window.AppInventor.getWebViewString();
 //var recv  = 90;
 newval   = recv/max_value;
 chart.data.datasets[0].data[0] = newval;
 chart.data.datasets[0].data[1] = 1-newval;
 chart.data.labels[0] = recv;
-document.getElementById("cap").innerHTML = recv + '℃';
+document.getElementById("cap").innerHTML = recv + "회";
 chart.update();
 }
 
