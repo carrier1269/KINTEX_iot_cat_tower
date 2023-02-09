@@ -17,4 +17,6 @@
 ### -만능기판에서 PCB제작을 통한 제품 소형화 및 재료 절감이 가능합니다.
 ### -앱인벤터로 제작하여 안드로이드 9.0버전 이상의 API변경 이슈를 해결하지 못하였으나, 추후에 Android Studio 앱 개발을 통한 API문제 해결가능.
 
+![image](https://user-images.githubusercontent.com/58325946/216480279-606f5f38-0ead-43e2-914e-90360d437953.png)
+
 ![image](https://user-images.githubusercontent.com/58325946/217686138-7151c0ce-3a88-4792-84f9-aad3b24d39e2.png)
